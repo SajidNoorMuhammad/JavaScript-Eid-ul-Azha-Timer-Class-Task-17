@@ -1,4 +1,4 @@
-const targetDate = new Date("June 17, 2024 18:58:00 GMT+00:00").getTime();
+const targetDate = new Date("June 17, 2024 19:30:00 GMT+00:00").getTime();
 
 function updateCountdown() {
     const newDate = new Date().getTime();
@@ -6,7 +6,7 @@ function updateCountdown() {
 
     if (timeDifference <= 0) {
         clearInterval(countdownInterval);
-        document.getElementById('count').innerHTML = '<div class="expired">Ramadan is here!</div>';
+        document.getElementById('count').innerHTML = '<div class="expired">Eid-ul-Azha is here!</div>';
     } else {
         const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // 1000ms * 60s * 60m * 24h
         const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 1000ms * 60s * 60m
