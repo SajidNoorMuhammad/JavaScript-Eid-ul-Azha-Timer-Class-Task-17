@@ -2,20 +2,22 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url('aa.jpeg');
+    background-image: url('q.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: darkred	;
+    color: #1a1718	;
 }
 
 h1{
-    color: darkred	;
+    color: #ffae42	;
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     font-style: italic;
+    font-family: cursive;
+
 }
 
 .count {
@@ -51,12 +53,17 @@ h1{
 }
 
 footer{
-    color: #DEB887;
+    color: #ffae42;
     text-align: center;
     font-size: 22px;
     font-weight: bold;
     font-style: italic;
     padding: 20px 0;
+}
+
+.item{
+    background-color: white;
+    border-radius: 40px;
 }
 
 @media  screen and (max-width: 768px){
