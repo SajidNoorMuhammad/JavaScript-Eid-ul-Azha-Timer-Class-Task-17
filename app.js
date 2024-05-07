@@ -5,13 +5,12 @@ function updateCountdown() {
     const timeDifference = targetDate - newDate;
 
     if (timeDifference <= 0) {
-        clearInterval(countdownInterval);
-        document.getElementById('count').innerHTML = '<div class="expired">Eid-ul-Azha is here!</div>';
+        document.getElementById('count').innerHTML = '<div>Eid-ul-Azha is here!</div>';
     } else {
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // 1000ms * 60s * 60m * 24h
-        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // 1000ms * 60s * 60m
-        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)); // 1000ms * 60s
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000); // 1000ms
+        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); 
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000); 
 
         document.getElementById('days').innerText = formatTime(days);
         document.getElementById('hours').innerHTML = formatTime(hours);
@@ -22,8 +21,8 @@ function updateCountdown() {
 }
 
 function formatTime(time) {
-    return time < 10 ? "0" + time : time;  // if time is less than 10, add 0 before the time, else return the time
+    return time < 10 ? "0" + time : time;  
 }
 
 updateCountdown();
-const countdownInterval = setInterval(updateCountdown, 1000);
+var countdownInterval = setInterval(updateCountdown, 1000);
